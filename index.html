@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f8fc">
+  <meta name="description" content="王军念，计算机视觉算法工程师。关注机器人视觉、工业视觉与模型部署。">
+  <title>王军念 — 机器人视觉 · 工业视觉</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="王军念，首页">WJ<span>.</span></a>
+    <nav aria-label="主导航">
+      <a href="#work">项目</a><a href="#experience">经历</a><a href="#skills">能力</a><a href="#honors">荣誉</a>
+    </nav>
+    <a class="header-contact" href="mailto:3078388291@qq.com">联系我 <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" id="top" aria-labelledby="intro-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse"></span> 计算机视觉算法工程师 · 杭州</p>
+        <h1 id="intro-title">你好，我是<br><span>王军念。</span></h1>
+        <p class="hero-lede">电子科学与技术本科，关注机器人视觉与工业视觉。做过 DIP 工业缺陷检测模型的训练、部署和现场迭代，也参与过多无人机导航项目的部署验证。</p>
+        <div class="hero-actions"><a class="button button-primary" href="#work">浏览项目 <span aria-hidden="true">↓</span></a><a class="text-link" href="mailto:3078388291@qq.com">3078388291@qq.com <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <aside class="hero-note" aria-label="关注方向">
+        <div class="orbit" aria-hidden="true"><i></i><i></i><i></i><b>CV</b></div>
+        <p class="note-label">关注方向</p>
+        <p class="note-title">让视觉系统<br>在真实场景里工作</p>
+        <div class="note-tags"><span>机器人视觉</span><span>工业检测</span><span>模型部署</span></div>
+      </aside>
+      <div class="hero-meta"><span>洛阳理工学院 · 电子科学与技术</span><span>2021 — 2025</span></div>
+    </section>
+
+    <section class="section wrap" id="work" aria-labelledby="work-title">
+      <div class="section-heading"><div><p class="eyebrow">SELECTED WORK</p><h2 id="work-title">项目与实践</h2></div><p class="section-intro">从 DIP 缺陷检测，到工业检测软件和竞赛项目。</p></div>
+      <article class="project-card dip-card" id="dip" aria-labelledby="dip-title">
+        <div class="dip-visual" role="img" aria-label="YOLOv13 训练期域分支：P2 特征、GRL 梯度反转、域分类器">
+          <p class="dip-visual-label">YOLOv13 训练期域分支</p>
+          <div class="dip-flow">
+            <div class="dip-flow-stage"><span class="dip-flow-index">01</span><strong>P2 特征</strong><small>Backbone 浅层</small></div>
+            <span class="dip-flow-arrow" aria-hidden="true">→</span>
+            <div class="dip-flow-stage dip-flow-focus"><span class="dip-flow-index">02</span><strong>GRL</strong><small>梯度反转</small></div>
+            <span class="dip-flow-arrow" aria-hidden="true">→</span>
+            <div class="dip-flow-stage"><span class="dip-flow-index">03</span><strong>域分类器</strong><small>Source / Target</small></div>
+          </div>
+        </div>
+        <div class="project-body dip-body">
+          <div class="project-topline"><span class="chip">工业视觉 · 模型与训练改造</span><span class="project-year">工作项目</span></div>
+          <h3 id="dip-title">DIP 缺陷检测<br>YOLOv13 模型与训练改造</h3>
+          <p>针对跨产线成像差异，参与定制 YOLOv13 模型与训练框架：接入域适应分支，改造特征提取、双域数据组织及联合损失计算，同时保留原有检测推理路径。</p>
+          <div class="tech-list"><span>YOLOv13</span><span>PyTorch</span><span>Ultralytics 定制</span><span>P2 特征对齐</span><span>DANN / GRL</span></div>
+          <ul class="dip-contributions">
+            <li><strong>模型分支改造</strong><span>从 Backbone 提取 P2 特征，接入 GRL 与域分类器，支持单层及多层特征对齐配置。</span></li>
+            <li><strong>训练流程重构</strong><span>扩展模型损失与 Trainer，组织 Source / Target 双域数据，支持目标域监督开关和 GRL 强度调度。</span></li>
+            <li><strong>训练推理隔离</strong><span>域分支只参与训练，保留原 P3 / P4 / P5 检测输出，并通过配置组织基线与消融对照。</span></li>
+          </ul>
+          <div class="project-metrics"><div><strong>80%+</strong><span>漏失相对减少</span></div></div>
+        </div>
+      </article>
+      <article class="project-card project-card-video" id="ai-sorting" aria-labelledby="ai-sorting-title">
+        <div class="project-media">
+          <video controls preload="metadata" playsinline poster="./assets/videos/ai-sorting-poster.jpg" aria-label="AI Sorting 功能演示视频">
+            <source src="./assets/videos/ai-sorting-demo.mp4" type="video/mp4">
+            当前浏览器不支持内嵌视频，可以直接访问 <a href="./assets/videos/ai-sorting-demo.mp4">演示视频文件</a>。
+          </video>
+        </div>
+        <div class="project-body">
+          <div class="project-topline"><span class="chip">工业视觉 · 算法应用与推理优化</span><span class="project-year">2026</span></div>
+          <h3 id="ai-sorting-title">AI Sorting<br>历史图像筛查与缺陷复判</h3>
+          <p>面向后制程发现不良后的历史图像反查，通过 AI 初筛缩小人工排查范围，再由质量人员复判确认缺陷。</p>
+          <div class="tech-list"><span>Python</span><span>PyTorch</span><span>DINOv2</span><span>OpenCV</span><span>特征相似度</span></div>
+          <ul class="algorithm-contributions">
+            <li><strong>特征分类</strong><span>基于 DINOv2 提取图像特征，以参考类原型和余弦相似度分类，支持任务内自动分组与原型更新。</span></li>
+            <li><strong>算法架构</strong><span>统一外观分类、无监督检测与监督模型的接入接口，按检测区域配置串行流水线，支持 NG 提前终止。</span></li>
+            <li><strong>推理优化</strong><span>采用有序多线程解码预取与批量特征提取，复用算法会话，保持有状态分类的处理顺序。</span></li>
+          </ul>
+          <div class="project-metrics"><div><strong>11.4 s</strong><span>300 张大图分类任务均值 · 4 线程解码</span></div></div>
+          <p class="project-note">业务演示 · 2026-09-24 · 内测样本</p>
+        </div>
+      </article>
+      <article class="project-card featured">
+        <div class="project-mark" aria-hidden="true"><span class="court-line"></span><span class="court-dot"></span><span class="court-track"></span></div>
+        <div class="project-body"><div class="project-topline"><span class="chip">计算机视觉 · 多目标追踪</span><span class="project-year">竞赛项目 · 2024</span></div><h3>体育赛事多目标追踪<br>与球衣号码识别</h3><p>参与构建球员检测、目标关联、轨迹排序和球衣号码识别流程。结合人体姿态检测定位背部区域，再使用 Seq OCR 识别号码。</p><div class="tech-list"><span>DAB-Deformable-DETR</span><span>匈牙利匹配</span><span>姿态检测</span><span>Seq OCR</span></div><div class="project-result"><span class="result-star">✳</span><span>2024 IKCEST 国际大数据竞赛<br><strong>二等奖 · 团队总决赛第 5 名</strong></span></div><button class="certificate-link" type="button" data-certificate="./assets/certificates/ikcest-2024-bigdata-second.jpg" data-title="2024 IKCEST 国际大数据竞赛二等奖 · 团队总决赛第 5 名（赛事报名队伍 3997 支）">查看获奖证书 <span aria-hidden="true">↗</span></button></div>
+      </article>
+      <div class="project-grid">
+        <article class="small-project"><div class="small-project-icon road-icon" aria-hidden="true">⌁</div><p class="eyebrow">竞赛 · 2023</p><h3>道路病害目标检测</h3><p>全球校园算法精英大赛 · 国家二等奖</p><button class="certificate-link" type="button" data-certificate="./assets/certificates/road-disease-national-second.png" data-title="道路病害目标检测 · 国家二等奖">查看证书 <span aria-hidden="true">↗</span></button></article>
+        <article class="small-project"><div class="small-project-icon few-icon" aria-hidden="true">✳</div><p class="eyebrow">竞赛 · 2023</p><h3>AIGC 驱动的小样本分类</h3><p>全球校园算法精英大赛 · 国家二等奖</p><button class="certificate-link" type="button" data-certificate="./assets/certificates/few-shot-national-second.png" data-title="AIGC 驱动的小样本分类 · 国家二等奖">查看证书 <span aria-hidden="true">↗</span></button></article>
+        <article class="small-project"><div class="small-project-icon power-icon" aria-hidden="true">⌘</div><p class="eyebrow">竞赛 · 2023</p><h3>电力大模型问答</h3><p>省级三等奖</p><button class="certificate-link" type="button" data-certificate="./assets/certificates/power-llm-provincial-third.png" data-title="电力大模型问答 · 省级三等奖">查看证书 <span aria-hidden="true">↗</span></button></article>
+      </div>
+      <p class="team-note"><span aria-hidden="true">ⓘ</span> 以上竞赛奖项为团队项目荣誉；此处仅列项目名称与获奖结果，不代表个人独立完成。</p>
+    </section>
+
+    <section class="section experience-section" id="experience" aria-labelledby="experience-title"><div class="wrap"><div class="section-heading"><div><p class="eyebrow">EXPERIENCE</p><h2 id="experience-title">经历</h2></div><p class="section-intro">在工业现场与研究项目中，围绕视觉算法落地积累经验。</p></div>
+      <div class="timeline">
+        <article class="timeline-item"><div class="timeline-date">2025.07 — 至今</div><div class="timeline-marker" aria-hidden="true"></div><div class="timeline-content"><p class="eyebrow">工作经历 · 苏州</p><h3>视觉算法工程师 <span>苏州真目人工智能科技有限公司</span></h3><p class="timeline-summary">参与电子制造场景的视觉检测与自动定位平台建设，工作覆盖目标检测、缺陷识别、算法部署和现场样本迭代。</p><ul><li>构建检测到本体框、局部 ROI 自动生成的处理链路，为后续分类、分割及参考图比对提供输入。</li><li>参与跨产线域适应实验及 PyTorch、ONNX Runtime、TensorRT 多后端部署。</li><li>参与数据采集、自动标注、人工复核与增量微调的迭代流程及插件式算法框架建设。</li></ul></div></article>
+        <article class="timeline-item"><div class="timeline-date">2025 · 4 个月</div><div class="timeline-marker" aria-hidden="true"></div><div class="timeline-content"><p class="eyebrow">实习经历 · 湖州</p><h3>计算机视觉实习生 <span>浙江大学湖州研究院 · 视觉定位方向</span></h3><p class="timeline-summary">参与基于 ROS1 的多无人机自主导航项目，完成相关系统部署、配置与运行验证。</p><ul><li>部署 ORB-SLAM3 与 EGO-Planner-v2，涉及视觉重定位、局部轨迹规划和多机避碰流程。</li><li>协助梳理图像 / IMU、位姿估计与轨迹规划的数据输入输出，并排查依赖、配置和运行问题。</li></ul></div></article>
+      </div>
+    </div></section>
+
+    <section class="section wrap skills-section" id="skills" aria-labelledby="skills-title"><div class="section-heading"><div><p class="eyebrow">TOOLKIT</p><h2 id="skills-title">能力与工具</h2></div><p class="section-intro">区分实际项目经历与基础接触，便于了解能力边界。</p></div>
+      <div class="skills-grid"><article class="skill-card"><span class="skill-index">01</span><h3>视觉算法与工程</h3><p>项目使用 / 实践</p><div class="skill-tags"><span>Python</span><span>PyTorch</span><span>OpenCV</span><span>目标检测</span><span>缺陷检测</span><span>分类 / 分割</span><span>多目标追踪</span><span>OCR</span></div></article><article class="skill-card"><span class="skill-index">02</span><h3>部署与评估</h3><p>项目使用 / 实践</p><div class="skill-tags"><span>ONNX</span><span>ONNX Runtime</span><span>TensorRT FP16</span><span>滑窗推理</span><span>坐标回映射</span><span>TP / FP / FN 分析</span></div></article><article class="skill-card skill-card-light"><span class="skill-index">03</span><h3>机器人视觉</h3><p>部署、配置与流程接触</p><div class="skill-tags"><span>ROS1</span><span>ORB-SLAM3</span><span>EGO-Planner-v2</span><span>视觉重定位</span><span>轨迹规划</span></div></article><article class="skill-card skill-card-light"><span class="skill-index">04</span><h3>开发基础</h3><p>常用工具与学习中</p><div class="skill-tags"><span>Git</span><span>C++ 基础</span><span>CMake 基础</span><span>Linux / Ubuntu</span></div></article></div>
+    </section>
+
+    <section class="section honors-section" id="honors" aria-labelledby="honors-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <div><p class="eyebrow">RECOGNITION</p><h2 id="honors-title">竞赛与荣誉</h2></div>
+          <p class="section-intro">竞赛团队荣誉与个人荣誉，按可核对资料整理；带 <span aria-hidden="true">↗</span> 的条目可查看证书。</p>
+        </div>
+        <div class="honors-list">
+          <div class="honor-row"><span class="honor-year">2024</span><button class="honor-name honor-cert" type="button" data-certificate="./assets/certificates/ikcest-2024-bigdata-second.jpg" data-title="2024 IKCEST 国际大数据竞赛二等奖 · 团队总决赛第 5 名（赛事报名队伍 3997 支）">IKCEST 国际大数据竞赛 <span class="cert-mark" aria-hidden="true">↗</span></button><strong>二等奖 · 团队第 5 名</strong></div>
+          <div class="honor-row"><span class="honor-year">2024</span><span class="honor-name">全国大学生智能车竞赛</span><strong>国家二等奖</strong></div>
+          <div class="honor-row"><span class="honor-year">2024</span><span class="honor-name">百度商业 AI 技术创新大赛</span><strong>省一等奖</strong></div>
+          <div class="honor-row"><span class="honor-year">2023</span><button class="honor-name honor-cert" type="button" data-certificate="./assets/certificates/service-outsourcing-national-third.jpg" data-title="第十四届中国大学生服务外包创新创业大赛 · 全国三等奖">服务外包创新创业大赛 · 全国赛 <span class="cert-mark" aria-hidden="true">↗</span></button><strong>国家三等奖</strong></div>
+          <div class="honor-row"><span class="honor-year">2023</span><button class="honor-name honor-cert" type="button" data-certificate="./assets/certificates/service-outsourcing-regional-second.jpg" data-title="第十四届中国大学生服务外包创新创业大赛 · 中部区域赛企业命题类二等奖">服务外包创新创业大赛 · 中部区域赛 <span class="cert-mark" aria-hidden="true">↗</span></button><strong>区域二等奖</strong></div>
+          <div class="honor-row"><span class="honor-year">2023</span><button class="honor-name honor-cert" type="button" data-certificate="./assets/certificates/road-disease-national-second.png" data-title="全球校园算法精英大赛 · 道路病害目标检测 · 全国总决赛二等奖">全球校园算法精英大赛 · 道路病害检测（全国赛）<span class="cert-mark" aria-hidden="true">↗</span></button><strong>国家二等奖</strong></div>
+          <div class="honor-row"><span class="honor-year">2023</span><button class="honor-name honor-cert" type="button" data-certificate="./assets/certificates/road-disease-provincial-first.jpg" data-title="全球校园算法精英大赛 · 道路病害目标检测 · 省级选拔赛一等奖">全球校园算法精英大赛 · 道路病害检测（省赛）<span class="cert-mark" aria-hidden="true">↗</span></button><strong>省一等奖</strong></div>
+          <div class="honor-row"><span class="honor-year">2023</span><button class="honor-name honor-cert" type="button" data-certificate="./assets/certificates/few-shot-national-second.png" data-title="全球校园算法精英大赛 · AIGC 驱动的小样本分类 · 全国总决赛二等奖">全球校园算法精英大赛 · AIGC 驱动的小样本分类 <span class="cert-mark" aria-hidden="true">↗</span></button><strong>国家二等奖</strong></div>
+          <div class="honor-row"><span class="honor-year">2023</span><button class="honor-name honor-cert" type="button" data-certificate="./assets/certificates/power-llm-provincial-third.png" data-title="全球校园算法精英大赛 · 电力大模型问答 · 省级三等奖">电力大模型问答 <span class="cert-mark" aria-hidden="true">↗</span></button><strong>省三等奖</strong></div>
+          <div class="honor-row"><span class="honor-year">2023</span><button class="honor-name honor-cert" type="button" data-certificate="./assets/certificates/software-cup-east-second.jpg" data-title="第十二届中国软件杯大学生软件设计大赛 · 智能系统设计与开源创新专项赛（东部赛区）二等奖">中国软件杯 · 智能系统设计与开源创新专项赛（东部赛区）<span class="cert-mark" aria-hidden="true">↗</span></button><strong>二等奖</strong></div>
+          <div class="honor-row"><span class="honor-year">2023</span><button class="honor-name honor-cert" type="button" data-certificate="./assets/certificates/sloc-data-award.jpg" data-title="第八届上海图书馆开放数据竞赛 ·「拾珠合中记」优胜奖">上海图书馆开放数据竞赛 ·「拾珠合中记」<span class="cert-mark" aria-hidden="true">↗</span></button><strong>优胜奖</strong></div>
+          <div class="honor-row"><span class="honor-year">2023</span><button class="honor-name honor-cert" type="button" data-certificate="./assets/certificates/sloc-paper-award.jpg" data-title="第八届上海图书馆开放数据竞赛 · 优秀创意论文奖">上海图书馆开放数据竞赛 · 数字人文论文创意 <span class="cert-mark" aria-hidden="true">↗</span></button><strong>优秀创意论文奖</strong></div>
+          <div class="honor-row"><span class="honor-year">2023</span><button class="honor-name honor-cert" type="button" data-certificate="./assets/certificates/sloc-ocr-finish.jpg" data-title="第八届上海图书馆开放数据竞赛 · 古籍 OCR 识别 · 完赛证书">上海图书馆开放数据竞赛 · 古籍 OCR 识别 <span class="cert-mark" aria-hidden="true">↗</span></button><strong>完赛证书</strong></div>
+          <div class="honor-row"><span class="honor-year">2023</span><button class="honor-name honor-cert" type="button" data-certificate="./assets/certificates/henan-electronics-design-third.jpg" data-title="2023「数智中原」河南省大学生电子设计大赛 · 本科组三等奖">河南省大学生电子设计大赛 · 本科组 <span class="cert-mark" aria-hidden="true">↗</span></button><strong>三等奖</strong></div>
+          <div class="honor-row"><span class="honor-year">2022—23</span><button class="honor-name honor-cert" type="button" data-certificate="./assets/certificates/library-reading-star.jpg" data-title="洛阳理工学院图书馆 · 2022-2023 学年阅读之星">洛阳理工学院图书馆阅读之星 <span class="cert-mark" aria-hidden="true">↗</span></button><strong>个人荣誉</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section wrap" aria-labelledby="contact-title"><div><p class="eyebrow">SAY HELLO</p><h2 id="contact-title">一起聊聊视觉<br>如何走进真实场景。</h2></div><a class="contact-email" href="mailto:3078388291@qq.com">3078388291@qq.com <span aria-hidden="true">↗</span></a></section>
+  </main>
+  <footer class="site-footer wrap"><span>© <span id="year">2026</span> 王军念</span><span>个人主页 · 内容以实际经历为准</span><a href="#top">回到顶部 ↑</a></footer>
+  <dialog class="certificate-dialog" aria-label="竞赛证书"><button class="dialog-close" type="button" aria-label="关闭证书">×</button><p class="dialog-title"></p><img alt=""></dialog>
+</body>
+</html>
