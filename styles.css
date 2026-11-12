@@ -41,3 +41,19 @@ button.honor-cert:hover{color:var(--blue);text-decoration:underline;text-underli
 .algorithm-contributions li{display:grid;grid-template-columns:64px 1fr;gap:9px;align-items:start;font-size:10px;line-height:1.65;color:#718398}
 .algorithm-contributions strong{color:#3b5d7e;font-size:10px}
 .project-card-video .project-note{margin-top:16px;font-size:10px;color:#8a99a9}
+/* 首屏成果数字 */
+.hero-lede{margin-bottom:22px}
+.hero-stats{list-style:none;display:flex;gap:34px;max-width:570px;margin:0 0 30px;padding:18px 0 0;border-top:1px solid var(--line)}
+.hero-stats li{display:flex;flex-direction:column;gap:6px}
+.hero-stats strong{font:600 26px/1.1 var(--serif);color:#234b73;white-space:nowrap}
+.hero-stats span{font-size:11px;line-height:1.55;color:var(--muted)}
+/* 项目关键指标放大 */
+.project-metrics strong{font-size:30px;letter-spacing:-.01em}
+.project-metrics span{font-size:11px}
+/* 荣誉折叠 */
+.honors-toggle{display:inline-flex;align-items:center;gap:8px;margin-top:24px;padding:10px 20px;border:1px solid #c9d8e6;border-radius:999px;background:var(--white);color:var(--blue-dark);font:inherit;font-size:12px;cursor:pointer;transition:border-color .2s,color .2s}
+.honors-toggle[hidden]{display:none}
+.honors-toggle:hover{border-color:var(--blue);color:var(--blue)}
+.honors-toggle:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.honors-toggle[aria-expanded="true"] .honors-toggle-arrow{display:inline-block;transform:rotate(180deg)}
+@media(max-width:560px){.hero-stats{gap:16px;margin-bottom:26px}.hero-stats strong{font-size:20px}.hero-stats span{font-size:9.5px}.project-metrics strong{font-size:24px}.honors-toggle{font-size:11px}}
