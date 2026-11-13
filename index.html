@@ -89,6 +89,85 @@
           <p class="project-note">业务演示 · 2026-09-24 · 内测样本</p>
         </div>
       </article>
+      <article class="project-card dip-card" id="workbench" aria-labelledby="workbench-title">
+        <div class="dip-visual wb-visual" role="img" aria-label="检测工作台流程：标注、训练、TensorRT 导出、检测，检测结果可送回标注；同一套代码分出完整版、只检测版、只标注版">
+          <p class="dip-visual-label">一套后端 · 按版本组合功能</p>
+          <div class="wb-flow">
+            <div class="dip-flow-stage"><span class="dip-flow-index">01</span><strong>标注与复核</strong><small>画框 · 待复核 · 数据集版本</small></div>
+            <span class="dip-flow-arrow" aria-hidden="true">→</span>
+            <div class="dip-flow-stage dip-flow-focus"><span class="dip-flow-index">02</span><strong>训练</strong><small>DEIMv2 · 曲线与日志</small></div>
+            <span class="wb-flow-back" aria-hidden="true">↺ 检测结果送回标注</span>
+            <span class="dip-flow-arrow wb-down" aria-hidden="true">↓</span>
+            <div class="dip-flow-stage"><span class="dip-flow-index">04</span><strong>检测</strong><small>批量 · 离线 · 保存结果</small></div>
+            <span class="dip-flow-arrow" aria-hidden="true">←</span>
+            <div class="dip-flow-stage"><span class="dip-flow-index">03</span><strong>导出</strong><small>TensorRT · 加密模型包</small></div>
+          </div>
+          <div class="wb-editions"><span>完整版</span><span>只检测版</span><span>只标注版</span></div>
+        </div>
+        <div class="project-body dip-body">
+          <div class="project-topline"><span class="chip">工业视觉 · 检测软件平台</span><span class="project-year">2026 · 开发中</span></div>
+          <h3 id="workbench-title">检测工作台<br>从标注到部署的一体化软件</h3>
+          <p>面向产线缺陷检测的桌面软件，把标注、训练、TensorRT 导出和离线检测放进同一个工作流；同一套后端按功能开关组合出不同版本，分别交给算法、标注和产线人员使用。</p>
+          <div class="tech-list"><span>DEIMv2</span><span>PyTorch</span><span>TensorRT</span><span>Python 后端 · HTTP 接口</span><span>Nuitka 打包</span></div>
+          <ul class="dip-contributions">
+            <li><strong>全流程</strong><span>项目管理、画框标注与复核、训练进度与日志、自动导出 TensorRT、批量检测；检测结果可一键送回标注继续迭代。</span></li>
+            <li><strong>数据版本</strong><span>每次导出生成独立的数据集版本，沿用上一版的训练 / 验证划分，便于前后对比；人工确认的标注不被任何自动流程覆盖。</span></li>
+            <li><strong>按版本交付</strong><span>完整版、只检测版、只标注版共用一套代码；模型加密打包、按机器授权，交付版本不带源码。</span></li>
+            <li><strong>多任务实验</strong><span>在 DEIMv2 上增加整图分类分支，与检测共用骨干，让只有整图标签的样本也能参与训练（实验中）。</span></li>
+          </ul>
+          <div class="project-metrics"><div><strong>3 个版本</strong><span>一套代码 · 按功能开关组合</span></div></div>
+        </div>
+      </article>
+      <article class="project-card dip-card" id="autolabel" aria-labelledby="autolabel-title">
+        <div class="dip-visual al-visual">
+          <p class="dip-visual-label">SAM 3 跨图找相似 · 免训练</p>
+          <svg class="al-diagram" viewBox="0 0 360 230" role="img" aria-labelledby="al-svg-title al-svg-desc">
+            <title id="al-svg-title">拼图找相似示意</title>
+            <desc id="al-svg-desc">把示例图放在画布上方、目标图放在下方，示例框作为 SAM 3 的视觉提示；在目标区域找到的相似目标映射回原图，进入待复核。</desc>
+            <rect x="8" y="8" width="168" height="214" rx="2" fill="#fff" stroke="#d3e2ef"/>
+            <text x="18" y="26" class="al-small">拼接画布</text>
+            <rect x="18" y="34" width="148" height="76" fill="#f3f8fc" stroke="#e1ebf4"/>
+            <text x="24" y="48" class="al-tiny">示例图</text>
+            <g transform="translate(70 58)"><rect x="0" y="6" width="44" height="26" rx="3" fill="#dce8f3"/><rect x="-6" y="14" width="6" height="10" fill="#b8cbdd"/><rect x="44" y="14" width="6" height="10" fill="#b8cbdd"/></g>
+            <rect x="62" y="58" width="60" height="38" fill="none" stroke="#3476c5" stroke-width="2"/>
+            <text x="126" y="72" class="al-tiny al-blue">示例框</text>
+            <line x1="18" y1="118" x2="166" y2="118" stroke="#c6d7e6" stroke-dasharray="3 3"/>
+            <rect x="18" y="126" width="148" height="86" fill="#f3f8fc" stroke="#e1ebf4"/>
+            <text x="24" y="140" class="al-tiny">目标图</text>
+            <g transform="translate(34 158)"><rect x="0" y="4" width="38" height="22" rx="3" fill="#dce8f3"/><rect x="-5" y="11" width="5" height="9" fill="#b8cbdd"/><rect x="38" y="11" width="5" height="9" fill="#b8cbdd"/></g>
+            <g transform="translate(108 150)"><rect x="0" y="4" width="38" height="22" rx="3" fill="#dce8f3"/><rect x="-5" y="11" width="5" height="9" fill="#b8cbdd"/><rect x="38" y="11" width="5" height="9" fill="#b8cbdd"/></g>
+            <rect x="26" y="158" width="56" height="34" fill="none" stroke="#3476c5" stroke-width="1.6" stroke-dasharray="4 3"/>
+            <rect x="100" y="150" width="56" height="34" fill="none" stroke="#3476c5" stroke-width="1.6" stroke-dasharray="4 3"/>
+            <path d="M184 115 h26" stroke="#7ea4c8" stroke-width="1.4" marker-end="url(#al-arrow)"/>
+            <rect x="214" y="92" width="62" height="46" rx="3" fill="#f9fcff" stroke="#8cb4d8"/>
+            <text x="245" y="112" text-anchor="middle" class="al-strong">SAM 3</text>
+            <text x="245" y="127" text-anchor="middle" class="al-tiny">视觉提示</text>
+            <path d="M282 115 h18" stroke="#7ea4c8" stroke-width="1.4" marker-end="url(#al-arrow)"/>
+            <rect x="304" y="62" width="50" height="40" rx="2" fill="#fff" stroke="#d3e2ef"/>
+            <text x="329" y="54" text-anchor="middle" class="al-small">待复核</text>
+            <text x="329" y="80" text-anchor="middle" class="al-tiny al-blue">可信</text>
+            <text x="329" y="94" text-anchor="middle" class="al-tiny">待确认</text>
+            <rect x="304" y="128" width="50" height="38" rx="2" fill="#fff" stroke="#e1ebf4"/>
+            <text x="329" y="144" text-anchor="middle" class="al-tiny">没找到</text>
+            <text x="329" y="158" text-anchor="middle" class="al-tiny">单独标记</text>
+            <defs><marker id="al-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#7ea4c8"/></marker></defs>
+          </svg>
+        </div>
+        <div class="project-body dip-body">
+          <div class="project-topline"><span class="chip">工业视觉 · 自动标注</span><span class="project-year">2026 · 开发中</span></div>
+          <h3 id="autolabel-title">SAM 3 自动标注<br>先试跑，再分流复核</h3>
+          <p>检测工作台中的自动标注模块。用 SAM 3 和视觉大模型生成候选框，但所有结果都先进入复核：先在已标注的数据上量化效果，再决定哪些结果可以直接采用。</p>
+          <div class="tech-list"><span>SAM 3</span><span>视觉提示</span><span>多模态大模型</span><span>人工复核流程</span></div>
+          <ul class="dip-contributions">
+            <li><strong>跨图找相似</strong><span>框一个示例，把示例图和目标图拼成一张画布，以示例框作为 SAM 3 的视觉提示，在其他图上找出同类目标；大图先切块。</span></li>
+            <li><strong>先试跑</strong><span>在已标注的图上比较找回与误报，按允许的错误率给出「可信」阈值，再批量运行，不凭感觉调参。</span></li>
+            <li><strong>结果分流</strong><span>自动结果只进待复核，分可信 / 待确认；没找到目标的图单独标记，避免被误确认为「无缺陷」。</span></li>
+            <li><strong>收紧与查错</strong><span>SAM 3 把粗框贴到目标边缘；视觉大模型负责检查已有标注和判定类别；同一套操作也提供命令行，可交给脚本或智能体执行。</span></li>
+          </ul>
+          <div class="project-metrics"><div><strong>3 种用法</strong><span>文字提示 · 找相似 · 收紧框</span></div></div>
+          <p class="project-note">开发中 · 准确率与速度待产线数据验收后补充</p>
+        </div>
+      </article>
       <article class="project-card featured">
         <div class="project-mark" aria-hidden="true"><span class="court-line"></span><span class="court-dot"></span><span class="court-track"></span></div>
         <div class="project-body"><div class="project-topline"><span class="chip">计算机视觉 · 多目标追踪</span><span class="project-year">竞赛项目 · 2024</span></div><h3>体育赛事多目标追踪<br>与球衣号码识别</h3><p>参与构建球员检测、目标关联、轨迹排序和球衣号码识别流程。结合人体姿态检测定位背部区域，再使用 Seq OCR 识别号码。</p><div class="tech-list"><span>DAB-Deformable-DETR</span><span>匈牙利匹配</span><span>姿态检测</span><span>Seq OCR</span></div><div class="project-result"><span class="result-star">✳</span><span>2024 IKCEST 国际大数据竞赛<br><strong>二等奖 · 团队总决赛第 5 名</strong></span></div><button class="certificate-link" type="button" data-certificate="./assets/certificates/ikcest-2024-bigdata-second.jpg" data-title="2024 IKCEST 国际大数据竞赛二等奖 · 团队总决赛第 5 名（赛事报名队伍 3997 支）">查看获奖证书 <span aria-hidden="true">↗</span></button></div>
