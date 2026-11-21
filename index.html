@@ -31,19 +31,34 @@
           <li><strong>3 种后端</strong><span>PyTorch · ONNX Runtime<br>TensorRT 部署</span></li>
           <li><strong>第 5 名</strong><span>IKCEST 2024 团队总决赛<br>3997 支报名队伍</span></li>
         </ul>
-        <div class="hero-actions"><a class="button button-primary" href="#work">浏览项目 <span aria-hidden="true">↓</span></a><a class="text-link" href="mailto:3078388291@qq.com">3078388291@qq.com <span aria-hidden="true">↗</span></a></div>
+        <div class="hero-actions"><a class="button button-primary" href="#work">浏览项目 <span aria-hidden="true">↓</span></a><a class="text-link" href="mailto:3078388291@qq.com">3078388291@qq.com <span aria-hidden="true">↗</span></a><button class="copy-email" type="button" data-copy-email="3078388291@qq.com">复制邮箱</button></div>
       </div>
       <aside class="hero-note" aria-label="关注方向">
         <div class="orbit" aria-hidden="true"><i></i><i></i><i></i><b>CV</b></div>
         <p class="note-label">关注方向</p>
         <p class="note-title">让视觉系统<br>在真实场景里工作</p>
         <div class="note-tags"><span>工业检测</span><span>模型部署</span><span>机器人视觉</span></div>
+        <div class="note-links">
+          <p class="note-label">代表项目</p>
+          <a href="#dip">DIP 域适应改造 <span aria-hidden="true">→</span></a>
+          <a href="#ai-sorting">AI Sorting 图像筛查 <span aria-hidden="true">→</span></a>
+          <a href="#workbench">检测工作台 · SAM 3 <span aria-hidden="true">→</span></a>
+          <a href="#competitions">IKCEST 赛事追踪 <span aria-hidden="true">→</span></a>
+        </div>
       </aside>
       <div class="hero-meta"><span>洛阳理工学院 · 电子科学与技术</span><span>2021 — 2025</span></div>
     </section>
 
     <section class="section wrap" id="work" aria-labelledby="work-title">
       <div class="section-heading"><div><p class="eyebrow">SELECTED WORK</p><h2 id="work-title">项目与实践</h2></div><p class="section-intro">从 DIP 缺陷检测，到工业检测软件和竞赛项目。</p></div>
+      <nav class="work-nav" aria-label="项目快速跳转">
+        <a href="#dip">DIP 域适应</a>
+        <a href="#ai-sorting">AI Sorting</a>
+        <a href="#workbench">检测工作台</a>
+        <a href="#autolabel">SAM 3 · 智能体</a>
+        <a href="#competitions">算法竞赛</a>
+      </nav>
+      <p class="work-group-label">工业视觉 · 工作与在研</p>
       <article class="project-card dip-card" id="dip" aria-labelledby="dip-title">
         <div class="dip-visual" role="img" aria-label="YOLOv13 训练期域分支：P2 特征、GRL 梯度反转、域分类器">
           <p class="dip-visual-label">YOLOv13 训练期域分支</p>
@@ -68,25 +83,26 @@
           <div class="project-metrics"><div><strong>80%+</strong><span>漏失相对减少</span></div></div>
         </div>
       </article>
-      <article class="project-card project-card-video" id="ai-sorting" aria-labelledby="ai-sorting-title">
+      <article class="project-card dip-card project-card-video" id="ai-sorting" aria-labelledby="ai-sorting-title">
         <div class="project-media">
+          <p class="dip-visual-label">AI Sorting 业务演示 · 1:27</p>
           <video controls preload="metadata" playsinline poster="./assets/videos/ai-sorting-poster.jpg" aria-label="AI Sorting 功能演示视频">
             <source src="./assets/videos/ai-sorting-demo.mp4" type="video/mp4">
             当前浏览器不支持内嵌视频，可以直接访问 <a href="./assets/videos/ai-sorting-demo.mp4">演示视频文件</a>。
           </video>
+          <p class="project-note">业务演示 · 2026-09-24 · 内测样本</p>
         </div>
-        <div class="project-body">
+        <div class="project-body dip-body">
           <div class="project-topline"><span class="chip">工业视觉 · 算法应用与推理优化</span><span class="project-year">2026</span></div>
           <h3 id="ai-sorting-title">AI Sorting<br>历史图像筛查与缺陷复判</h3>
           <p>面向后制程发现不良后的历史图像反查，通过 AI 初筛缩小人工排查范围，再由质量人员复判确认缺陷。</p>
           <div class="tech-list"><span>Python</span><span>PyTorch</span><span>DINOv2</span><span>OpenCV</span><span>特征相似度</span></div>
-          <ul class="algorithm-contributions">
+          <ul class="dip-contributions">
             <li><strong>特征分类</strong><span>基于 DINOv2 提取图像特征，以参考类原型和余弦相似度分类，支持任务内自动分组与原型更新。</span></li>
             <li><strong>算法架构</strong><span>统一外观分类、无监督检测与监督模型的接入接口，按检测区域配置串行流水线，支持 NG 提前终止。</span></li>
             <li><strong>推理优化</strong><span>采用有序多线程解码预取与批量特征提取，复用算法会话，保持有状态分类的处理顺序。</span></li>
           </ul>
           <div class="project-metrics"><div><strong>11.4 s</strong><span>300 张大图分类任务均值 · 4 线程解码</span></div></div>
-          <p class="project-note">业务演示 · 2026-09-24 · 内测样本</p>
         </div>
       </article>
       <article class="project-card dip-card" id="workbench" aria-labelledby="workbench-title">
@@ -120,54 +136,55 @@
       </article>
       <article class="project-card dip-card" id="autolabel" aria-labelledby="autolabel-title">
         <div class="dip-visual al-visual">
-          <p class="dip-visual-label">SAM 3 跨图找相似 · 免训练</p>
-          <svg class="al-diagram" viewBox="0 0 360 230" role="img" aria-labelledby="al-svg-title al-svg-desc">
+          <p class="dip-visual-label">SAM 3 自动标注 · 智能体工具链</p>
+          <svg class="al-diagram" viewBox="0 0 384 236" role="img" aria-labelledby="al-svg-title al-svg-desc">
             <title id="al-svg-title">拼图找相似示意</title>
             <desc id="al-svg-desc">把示例图放在画布上方、目标图放在下方，示例框作为 SAM 3 的视觉提示；在目标区域找到的相似目标映射回原图，进入待复核。</desc>
-            <rect x="8" y="8" width="168" height="214" rx="2" fill="#fff" stroke="#d3e2ef"/>
-            <text x="18" y="26" class="al-small">拼接画布</text>
-            <rect x="18" y="34" width="148" height="76" fill="#f3f8fc" stroke="#e1ebf4"/>
-            <text x="24" y="48" class="al-tiny">示例图</text>
-            <g transform="translate(70 58)"><rect x="0" y="6" width="44" height="26" rx="3" fill="#dce8f3"/><rect x="-6" y="14" width="6" height="10" fill="#b8cbdd"/><rect x="44" y="14" width="6" height="10" fill="#b8cbdd"/></g>
-            <rect x="62" y="58" width="60" height="38" fill="none" stroke="#3476c5" stroke-width="2"/>
-            <text x="126" y="72" class="al-tiny al-blue">示例框</text>
-            <line x1="18" y1="118" x2="166" y2="118" stroke="#c6d7e6" stroke-dasharray="3 3"/>
-            <rect x="18" y="126" width="148" height="86" fill="#f3f8fc" stroke="#e1ebf4"/>
-            <text x="24" y="140" class="al-tiny">目标图</text>
+            <rect x="6" y="8" width="176" height="218" rx="2" fill="#fff" stroke="#cddde9"/>
+            <text x="16" y="26" class="al-small">拼接画布</text>
+            <rect x="16" y="34" width="156" height="76" fill="#f3f8fc" stroke="#dce7f2"/>
+            <text x="22" y="48" class="al-tiny">示例图</text>
+            <g transform="translate(52 58)"><rect x="0" y="6" width="42" height="26" rx="3" fill="#dce8f3"/><rect x="-6" y="14" width="6" height="10" fill="#b8cbdd"/><rect x="42" y="14" width="6" height="10" fill="#b8cbdd"/></g>
+            <rect x="44" y="56" width="58" height="38" fill="none" stroke="#2968b3" stroke-width="2"/>
+            <text x="108" y="79" class="al-tiny al-blue">示例框</text>
+            <line x1="16" y1="118" x2="172" y2="118" stroke="#c6d7e6" stroke-dasharray="3 3"/>
+            <rect x="16" y="126" width="156" height="88" fill="#f3f8fc" stroke="#dce7f2"/>
+            <text x="22" y="140" class="al-tiny">目标图</text>
             <g transform="translate(34 158)"><rect x="0" y="4" width="38" height="22" rx="3" fill="#dce8f3"/><rect x="-5" y="11" width="5" height="9" fill="#b8cbdd"/><rect x="38" y="11" width="5" height="9" fill="#b8cbdd"/></g>
             <g transform="translate(108 150)"><rect x="0" y="4" width="38" height="22" rx="3" fill="#dce8f3"/><rect x="-5" y="11" width="5" height="9" fill="#b8cbdd"/><rect x="38" y="11" width="5" height="9" fill="#b8cbdd"/></g>
-            <rect x="26" y="158" width="56" height="34" fill="none" stroke="#3476c5" stroke-width="1.6" stroke-dasharray="4 3"/>
-            <rect x="100" y="150" width="56" height="34" fill="none" stroke="#3476c5" stroke-width="1.6" stroke-dasharray="4 3"/>
-            <path d="M184 115 h26" stroke="#7ea4c8" stroke-width="1.4" marker-end="url(#al-arrow)"/>
-            <rect x="214" y="92" width="62" height="46" rx="3" fill="#f9fcff" stroke="#8cb4d8"/>
-            <text x="245" y="112" text-anchor="middle" class="al-strong">SAM 3</text>
-            <text x="245" y="127" text-anchor="middle" class="al-tiny">视觉提示</text>
-            <path d="M282 115 h18" stroke="#7ea4c8" stroke-width="1.4" marker-end="url(#al-arrow)"/>
-            <rect x="304" y="62" width="50" height="40" rx="2" fill="#fff" stroke="#d3e2ef"/>
-            <text x="329" y="54" text-anchor="middle" class="al-small">待复核</text>
-            <text x="329" y="80" text-anchor="middle" class="al-tiny al-blue">可信</text>
-            <text x="329" y="94" text-anchor="middle" class="al-tiny">待确认</text>
-            <rect x="304" y="128" width="50" height="38" rx="2" fill="#fff" stroke="#e1ebf4"/>
-            <text x="329" y="144" text-anchor="middle" class="al-tiny">没找到</text>
-            <text x="329" y="158" text-anchor="middle" class="al-tiny">单独标记</text>
-            <defs><marker id="al-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#7ea4c8"/></marker></defs>
+            <rect x="26" y="154" width="54" height="34" fill="none" stroke="#2968b3" stroke-width="1.6" stroke-dasharray="4 3"/>
+            <rect x="100" y="146" width="54" height="34" fill="none" stroke="#2968b3" stroke-width="1.6" stroke-dasharray="4 3"/>
+            <path d="M188 118 h22" stroke="#6690b8" stroke-width="1.5" marker-end="url(#al-arrow)"/>
+            <rect x="216" y="92" width="66" height="50" rx="3" fill="#f9fcff" stroke="#8cb4d8"/>
+            <text x="249" y="113" text-anchor="middle" class="al-strong">SAM 3</text>
+            <text x="249" y="129" text-anchor="middle" class="al-tiny">视觉提示</text>
+            <path d="M288 118 h18" stroke="#6690b8" stroke-width="1.5" marker-end="url(#al-arrow)"/>
+            <rect x="312" y="62" width="66" height="44" rx="2" fill="#fff" stroke="#cddde9"/>
+            <text x="345" y="53" text-anchor="middle" class="al-small">待复核</text>
+            <text x="345" y="80" text-anchor="middle" class="al-tiny al-blue">可信</text>
+            <text x="345" y="96" text-anchor="middle" class="al-tiny">待确认</text>
+            <rect x="312" y="130" width="66" height="44" rx="2" fill="#fff" stroke="#dce7f2"/>
+            <text x="345" y="148" text-anchor="middle" class="al-tiny">没找到</text>
+            <text x="345" y="164" text-anchor="middle" class="al-tiny">单独标记</text>
+            <defs><marker id="al-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#6690b8"/></marker></defs>
           </svg>
         </div>
         <div class="project-body dip-body">
-          <div class="project-topline"><span class="chip">工业视觉 · 自动标注</span><span class="project-year">2026 · 开发中</span></div>
-          <h3 id="autolabel-title">SAM 3 自动标注<br>先试跑，再分流复核</h3>
-          <p>检测工作台中的自动标注模块。用 SAM 3 和视觉大模型生成候选框，但所有结果都先进入复核：先在已标注的数据上量化效果，再决定哪些结果可以直接采用。</p>
-          <div class="tech-list"><span>SAM 3</span><span>视觉提示</span><span>多模态大模型</span><span>人工复核流程</span></div>
+          <div class="project-topline"><span class="chip">工业视觉 · 自动标注与智能体</span><span class="project-year">2026 · 开发中</span></div>
+          <h3 id="autolabel-title">SAM 3 自动标注与智能体<br>先试跑复核，再工具编排迭代</h3>
+          <p>检测工作台中的自动标注与对话智能体模块。通过 SAM 3、视觉大模型与统一工具链完成试跑定阈值、批量预标和人工分流复核，并由内置智能体按技能手册编排长程标注与模型迭代。</p>
+          <div class="tech-list"><span>SAM 3</span><span>视觉提示</span><span>多模态大模型</span><span>Tool-Use 智能体</span><span>Skills / 记忆</span></div>
           <ul class="dip-contributions">
-            <li><strong>跨图找相似</strong><span>框一个示例，把示例图和目标图拼成一张画布，以示例框作为 SAM 3 的视觉提示，在其他图上找出同类目标；大图先切块。</span></li>
-            <li><strong>先试跑</strong><span>在已标注的图上比较找回与误报，按允许的错误率给出「可信」阈值，再批量运行，不凭感觉调参。</span></li>
-            <li><strong>结果分流</strong><span>自动结果只进待复核，分可信 / 待确认；没找到目标的图单独标记，避免被误确认为「无缺陷」。</span></li>
-            <li><strong>收紧与查错</strong><span>SAM 3 把粗框贴到目标边缘；视觉大模型负责检查已有标注和判定类别；同一套操作也提供命令行，可交给脚本或智能体执行。</span></li>
+            <li><strong>跨图与分组</strong><span>支持文字提示、拼图跨图找相似，以及按模型外观聚类逐组设示例；SAM 3 收紧粗框，视觉大模型负责查错与判类。</span></li>
+            <li><strong>试跑与分流</strong><span>先在已标注图上量化找回与误报并给出可信阈值；自动结果只进待复核（可信 / 待确认），未找到目标的图单独标记。</span></li>
+            <li><strong>智能体编排</strong><span>内置支持 OpenAI / Anthropic 工具调用的对话助手与 JSON CLI，通过 read / write / confirm 三级风险审批驱动标注与主动学习迭代。</span></li>
+            <li><strong>技能与记忆</strong><span>SKILL.md 按需加载工作流手册，配套项目长期记忆、上下文压缩、步骤看板与轮次状态机，支持跨会话续跑，规则由服务层硬约束。</span></li>
           </ul>
-          <div class="project-metrics"><div><strong>3 种用法</strong><span>文字提示 · 找相似 · 收紧框</span></div></div>
-          <p class="project-note">开发中 · 准确率与速度待产线数据验收后补充</p>
+          <div class="project-metrics"><div><strong>3 级审批</strong><span>read · write · confirm 风险隔离</span></div><div><strong>双入口</strong><span>内置对话助手 · JSON CLI</span></div></div>
+          <p class="project-note">开发中 · 智能体循环、审批与技能已通过模拟测试，真实大模型与产线数据验收待补充</p>
         </div>
       </article>
+      <p class="work-group-label" id="competitions">算法竞赛 · 团队项目</p>
       <article class="project-card featured">
         <div class="project-mark" aria-hidden="true"><span class="court-line"></span><span class="court-dot"></span><span class="court-track"></span></div>
         <div class="project-body"><div class="project-topline"><span class="chip">计算机视觉 · 多目标追踪</span><span class="project-year">竞赛项目 · 2024</span></div><h3>体育赛事多目标追踪<br>与球衣号码识别</h3><p>参与构建球员检测、目标关联、轨迹排序和球衣号码识别流程。结合人体姿态检测定位背部区域，再使用 Seq OCR 识别号码。</p><div class="tech-list"><span>DAB-Deformable-DETR</span><span>匈牙利匹配</span><span>姿态检测</span><span>Seq OCR</span></div><div class="project-result"><span class="result-star">✳</span><span>2024 IKCEST 国际大数据竞赛<br><strong>二等奖 · 团队总决赛第 5 名</strong></span></div><button class="certificate-link" type="button" data-certificate="./assets/certificates/ikcest-2024-bigdata-second.jpg" data-title="2024 IKCEST 国际大数据竞赛二等奖 · 团队总决赛第 5 名（赛事报名队伍 3997 支）">查看获奖证书 <span aria-hidden="true">↗</span></button></div>
@@ -220,9 +237,10 @@
       </div>
     </section>
 
-    <section class="contact-section wrap" aria-labelledby="contact-title"><div><p class="eyebrow">SAY HELLO</p><h2 id="contact-title">一起聊聊视觉<br>如何走进真实场景。</h2></div><a class="contact-email" href="mailto:3078388291@qq.com">3078388291@qq.com <span aria-hidden="true">↗</span></a></section>
+    <section class="contact-section wrap" aria-labelledby="contact-title"><div><p class="eyebrow">SAY HELLO</p><h2 id="contact-title">一起聊聊视觉<br>如何走进真实场景。</h2></div><div class="contact-actions"><a class="contact-email" href="mailto:3078388291@qq.com">3078388291@qq.com <span aria-hidden="true">↗</span></a><button class="copy-email" type="button" data-copy-email="3078388291@qq.com">复制邮箱</button></div></section>
   </main>
   <footer class="site-footer wrap"><span>© <span id="year">2026</span> 王军念</span><span>个人主页 · 内容以实际经历为准</span><a href="#top">回到顶部 ↑</a></footer>
   <dialog class="certificate-dialog" aria-label="竞赛证书"><button class="dialog-close" type="button" aria-label="关闭证书">×</button><p class="dialog-title"></p><img alt=""></dialog>
+  <span class="sr-only" id="copy-status" aria-live="polite"></span>
 </body>
 </html>
